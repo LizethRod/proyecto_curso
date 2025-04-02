@@ -33,4 +33,14 @@ class CursoController extends Controller
         return "La división de $x / $y es: $division";
     }
 
+    public function abrirVista()
+    {
+        $name = "Ejemplo_nombre";
+        $lastname = "Ejemplo_apellido";
+        $age = 20;
+        // return view("layout.child", ["name" => $name, "lastname" => $lastname, "age" => $age]);
+        // return view("layout.child")->with("name", $name)->with("lastname", $lastname)->with("age", $age);
+        return view("layout.child", compact("name", "lastname", "age"));
+    }
+
 }
